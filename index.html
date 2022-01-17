@@ -10,12 +10,12 @@
   </head>
   <body onload="fetchIssues()">
     <div class="container">
-      <h1>Issue Tracker: </h1>
+      <h1>Issue Tracker: <span id="open-issue">0</span>/<span id="total-issue">0</span> </h1>
       <div class="jumbotron">
         <h3>Add New Issue:</h3>
         <form id="issueInputForm">
           <div class="form-group">
-            <label for="issueDescription">Description</label>
+            <label for="issueDescription">Description<span class="text-danger"> *</span></label>
             <input type="text" class="form-control" id="issueDescription" placeholder="Describe the issue ...">
           </div>
           <div class="form-group">
@@ -27,7 +27,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="issueAssignedTo">Assigned To</label>
+            <label for="issueAssignedTo">Assigned To<span class="text-danger"> *</span></label>
             <input type="text" class="form-control" id="issueAssignedTo" placeholder="Enter responsible ...">
           </div>
           <button type="submit" class="btn btn-primary">Add</button>
